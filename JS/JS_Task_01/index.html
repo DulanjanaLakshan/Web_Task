@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <title>JS_Task_01</title>
     <style>
-        main {
-            width: 100%;
-            height: 929px;
+        body {
+           overflow-x: hidden;
         }
     </style>
 </head>
 <body>
-<main>
-    <h1>Hello IJSE...!</h1>
-</main>
+<h1>Hello IJSE...</h1>
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script>
-    $("body").mousemove(function () {
-        
+   $(window).on("mousemove", function (e) {
+       $("h1").css("position", "relative");
+       $("h1").css("left", e.pageX);
+       $("h1").css("top", e.pageY);
     })
 </script>
 </body>
